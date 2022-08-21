@@ -1,7 +1,7 @@
-source
+Source
 ======
 
 .. toctree::
    :maxdepth: 4
 
-   app
+   app.py

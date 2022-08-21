@@ -3,16 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Validador de Geometrias's documentation!
-===================================================
+Bem vindo a documentação do Validador de Geometrias!
+====================================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Conteúdo:
 
    modules
 
-Indices and tables
+Índices e tabelas
 ==================
 
 * :ref:`genindex`
