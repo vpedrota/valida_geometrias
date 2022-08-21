@@ -1,6 +1,5 @@
 flask
 psycopg2
-json
 jsonschema
 pytest
 numpy
