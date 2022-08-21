@@ -3,11 +3,7 @@ import jsonschema
 import json
 from flask import Flask, request
 
-def create_app():
-
-    app = Flask(__name__)
-
-    schema = {
+schema = {
     "type": "object",
     "properties": {
         "type": {
@@ -16,19 +12,10 @@ def create_app():
         "coodinates": { "type": "array"}
     },
     "required": ["type", "coordinates"]
-    }
+}
 
-    def get_db_connection():
-        conn = psycopg2.connect(
-            database="db_name",
-            user="user",
-            password="pass",
-            host="0.0.0.0"
-        )
 
-        return conn
-
-    def json_schema(request):
+def json_schema(request):
         """_summary_
 
         Args:
@@ -63,6 +50,22 @@ def create_app():
             errorMessage['detail'] = "A requisição não possui os campos obrigatórios para processamento ou valores estão fora do formato especificado"
             errorMessage['title'] = "A requisição não pode ser processada devido a validação de campos"
             return errorMessage
+
+def create_app():
+
+    app = Flask(__name__)
+
+
+    def get_db_connection():
+        conn = psycopg2.connect(
+            database="db_name",
+            user="user",
+            password="pass",
+            host="0.0.0.0"
+        )
+
+        return conn
+
 
 
     @app.route("/", methods=['POST'])
