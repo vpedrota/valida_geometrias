@@ -29,6 +29,14 @@ def create_app():
         return conn
 
     def json_schema(request):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
         v = jsonschema.Draft7Validator(schema, format_checker=jsonschema.draft7_format_checker)
 
         errorMessage = {
