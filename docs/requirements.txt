@@ -1,0 +1,5 @@
+flask
+shapely
+jsonschema
+requests
+sphinxcontrib-napoleon
