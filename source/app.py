@@ -97,6 +97,8 @@ def create_app():
         errorMessage['status'] = 400
         errorMessage['title'] = "A requisição não pode ser processada devido a erros de geometria, geometria inválida!"
         errorMessage['detail'] = error_detail.split('HINT')[0]
+        cur.close()
+        conn.close()
         return errorMessage, 400
 
     return app
