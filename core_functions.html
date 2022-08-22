@@ -75,18 +75,19 @@
   <section id="module-core_functions">
 <span id="core-functions-py"></span><h1>core_functions.py<a class="headerlink" href="#module-core_functions" title="Link permanente para este cabeçalho"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="core_functions.json_schema">
-<span class="sig-prename descclassname"><span class="pre">core_functions.</span></span><span class="sig-name descname"><span class="pre">json_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core_functions.json_schema" title="Link permanente para esta definição"></a></dt>
-<dd><p>_summary_</p>
+<dt class="sig sig-object py" id="core_functions.json_schema_checker">
+<span class="sig-prename descclassname"><span class="pre">core_functions.</span></span><span class="sig-name descname"><span class="pre">json_schema_checker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#core_functions.json_schema_checker" title="Link permanente para esta definição"></a></dt>
+<dd><p>Esta função realiza a validação do json de entrada com o schema definido, se houver erros, retorna um json com os erros. Se não houver erros, retorna None.
+O schema foi definido de acordo com as normas do GeoJSON e aceitam todas as geometrias oficialmente suportadas,</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parâmetros</dt>
-<dd class="field-odd"><p><strong>request</strong> (<em>_type_</em>) – _description_</p>
+<dd class="field-odd"><p><strong>request</strong> (<em>dict</em>) – este argumento é um dicionário que representa o json de entrada. Nele deve ser definido o campo “type” e o campo “coordinates”.</p>
 </dd>
 <dt class="field-even">Retorna</dt>
-<dd class="field-even"><p>_description_</p>
+<dd class="field-even"><p>retorna um dicionário com os erros encontrados. Se não houver erros, retorna None.</p>
 </dd>
 <dt class="field-odd">Tipo de retorno</dt>
-<dd class="field-odd"><p>_type_</p>
+<dd class="field-odd"><p>dict</p>
 </dd>
 </dl>
 </dd></dl>
