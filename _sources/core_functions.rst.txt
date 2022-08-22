@@ -14,7 +14,7 @@ O schema foi definido de acordo com as normas do GeoJSON e aceitam todas as geom
         "required": ["type", "coordinates"]
     }
 
-
+   Nesta parte apenas a verificação do formato é feita, o conteúdo não é verificado. A verificação do conteúdo é feita posteriormente utilizando o Postgis.
 .. automodule:: core_functions
    :members:
    :undoc-members:

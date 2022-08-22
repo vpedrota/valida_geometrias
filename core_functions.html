@@ -75,16 +75,18 @@
   <section id="core-functions-py">
 <h1>core_functions.py<a class="headerlink" href="#core-functions-py" title="Link permanente para este cabeçalho"></a></h1>
 <p>O schema foi definido de acordo com as normas do GeoJSON e aceitam todas as geometrias oficialmente suportadas. Consulte a seguir o schema definido:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">schema</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="s2">&quot;enum&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;MultiPolygon&quot;</span><span class="p">,</span> <span class="s2">&quot;LineString&quot;</span><span class="p">,</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span> <span class="s2">&quot;MultiPoint&quot;</span><span class="p">,</span> <span class="s2">&quot;MultiLineString&quot;</span><span class="p">,</span> <span class="s2">&quot;GeometryCollection&quot;</span><span class="p">]</span>
-                <span class="p">},</span>
-        <span class="s2">&quot;coodinates&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">}</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">schema</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+         <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="p">{</span>
+                     <span class="s2">&quot;enum&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Polygon&quot;</span><span class="p">,</span> <span class="s2">&quot;MultiPolygon&quot;</span><span class="p">,</span> <span class="s2">&quot;LineString&quot;</span><span class="p">,</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span> <span class="s2">&quot;MultiPoint&quot;</span><span class="p">,</span> <span class="s2">&quot;MultiLineString&quot;</span><span class="p">,</span> <span class="s2">&quot;GeometryCollection&quot;</span><span class="p">]</span>
+                 <span class="p">},</span>
+         <span class="s2">&quot;coodinates&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">}</span>
+     <span class="p">},</span>
+     <span class="s2">&quot;required&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">]</span>
+ <span class="p">}</span>
+
+<span class="n">Nesta</span> <span class="n">parte</span> <span class="n">apenas</span> <span class="n">a</span> <span class="n">verificação</span> <span class="n">do</span> <span class="n">formato</span> <span class="n">é</span> <span class="n">feita</span><span class="p">,</span> <span class="n">o</span> <span class="n">conteúdo</span> <span class="n">não</span> <span class="n">é</span> <span class="n">verificado</span><span class="o">.</span> <span class="n">A</span> <span class="n">verificação</span> <span class="n">do</span> <span class="n">conteúdo</span> <span class="n">é</span> <span class="n">feita</span> <span class="n">posteriormente</span> <span class="n">utilizando</span> <span class="n">o</span> <span class="n">Postgis</span><span class="o">.</span>
 </pre></div>
 </div>
 <span class="target" id="module-core_functions"></span><dl class="py function">
