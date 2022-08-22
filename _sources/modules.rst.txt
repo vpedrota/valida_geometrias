@@ -4,4 +4,5 @@ Source
 .. toctree::
    :maxdepth: 4
 
-   app.py
+   app
+   core_functions

@@ -1,4 +1,4 @@
-core\_functions module
+core\_functions.py
 ======================
 
 .. automodule:: core_functions
