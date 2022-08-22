@@ -1,3 +1,3 @@
 GitHub Pages of [vpedrota/validada_geometrias](https://github.com/vpedrota/validada_geometrias.git)
 ===
-Sphinx html documentation of [346640f4](https://github.com/vpedrota/validada_geometrias/tree/346640f48ae3206c121e53ca6fc339e0e49f06f8)
+Sphinx html documentation of [d51d6e93](https://github.com/vpedrota/validada_geometrias/tree/d51d6e93716dc7234909273ad3d3416d1b45ff2a)
