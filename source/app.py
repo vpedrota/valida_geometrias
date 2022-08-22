@@ -25,7 +25,7 @@ def create_app():
     def index():
 
         json_data = request.json
-        format_errors = json_schema(json_data)
+        format_errors = json_schema_checker(json_data)
         error_detail = None
         if(format_errors != None):
             return format_errors, 400

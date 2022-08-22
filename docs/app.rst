@@ -1,7 +1,7 @@
 app.py
 ==========
 
-      Neste módulo temos as principais funções para o funcionamento do sistema.
+      Neste módulo temos as principais funções para o funcionamento do sistema. 
 
 .. automodule:: app
    :members:

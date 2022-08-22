@@ -12,14 +12,15 @@ schema = {
 }
 
 
-def json_schema(request):
-    """_summary_
+def json_schema_checker(request:dict) -> dict:
+    """Esta função realiza a validação do json de entrada com o schema definido, se houver erros, retorna um json com os erros. Se não houver erros, retorna None.
+    O schema foi definido de acordo com as normas do GeoJSON e aceitam todas as geometrias oficialmente suportadas, 
 
     Args:
-        request (_type_): _description_
+        request (dict): este argumento é um dicionário que representa o json de entrada. Nele deve ser definido o campo "type" e o campo "coordinates".
 
     Returns:
-        _type_: _description_
+        dict: retorna um dicionário com os erros encontrados. Se não houver erros, retorna None.
     """
     v = jsonschema.Draft7Validator(schema, format_checker=jsonschema.draft7_format_checker)
 
