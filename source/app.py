@@ -5,6 +5,11 @@ from flask import Flask, request
 from core_functions import *
 
 def create_app():
+    """ Cria a aplicação Flask e retorna a mesma. Para utilizar a aplicação nos testes automatizados ou até mesmo em outros casos, é necessário importar o módulo Flask e chamar a função create_app().
+
+    Returns:
+        Flask Instance: Retorna uma instância da aplicação Flask.
+    """
 
     app = Flask(__name__)
 
