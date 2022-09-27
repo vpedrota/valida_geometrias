@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
+      - uses: actions/checkout@v3
+      - name: Postgis up with docker composer
+        run: |
+          sphinx-apidoc -o docs/ source/
       - uses: seanzhengw/sphinx-pages@master
         id: sphinx-pages
         with:
