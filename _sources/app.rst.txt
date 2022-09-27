@@ -1,8 +1,8 @@
 app.py
 ==========
 
-      Neste módulo temos as principais funções para o funcionamento do sistema. Aqui temos a definição dos endpoints da API e também o envio do GeoJSON
-      após a sua verificação de seu formato, para que seja verificado sua integridade. Consulte a definição do endpoint a seguir::
+      Neste módulo temos as principais funções para o funcionamento do sistema. Aqui temos a definição dos endpoints da API e também a verificação dos dados de entrada
+      e de integridade da geometria recebida.::
 
             @app.route("/", methods=['POST'])
             def index():
@@ -21,13 +21,13 @@ app.py
                   try:
                         ...
       
-      Na função acima, temos um GeoJSON deve ser enviado via POST para o endpoint /, e o sistema verifica se o GeoJSON é válido. Primeiro ele realiza a verificação
-      do formato e de seus repectivos campos, em seguida, verifica a integridade do GeoJSON. Caso algum erro seja encontrado, o sistema retorna o erro em um formato 
-      específico seguindo a rfc 7807. Caso não haja erros, o sistema retorna a mensagem de sucesso. Verifique nos exemplos a seguir o formato da mensagem.
+      Na função index, um GeoJSON será recebido via POST para o endpoint /, e o sistema verifica se o GeoJSON é válido. Primeiro ele realiza a verificação
+      do formato do dado e de seus repectivos campos. Em seguida, verifica a integridade da geometria. Caso algum erro seja encontrado, o sistema retornará o erro em um formato 
+      específico seguindo a RFC 7807. Caso não haja erros, o sistema retorna a mensagem de sucesso. Verifique nos exemplos a seguir o formato da mensagem de retorno.
 
       Exemplos:
 
-      >>> curl -d '{'type': 'Polygon', 'coordinates': [[[1, 2], [3, 4]]]}' -H "Content-Type: application/json" -X POST http://localhost:3000/data
+      >>> curl -d '{'type': 'Polygon', 'coordinates': [[[1, 2], [3, 4]]]}' -H "Content-Type: application/json" -X POST http://localhost:5000/
       {
             "detail": "geometry requires more points\n",
             "status": 400,
