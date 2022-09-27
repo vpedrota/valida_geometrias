@@ -11,9 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.workflow_run.conclusion == 'success'
     steps:
-      - uses: actions/checkout@v3
-      - name: Postgis up with docker composer
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
         run: |
+          pip install python3-sphinx
           sphinx-apidoc -o docs/ source/
       - uses: seanzhengw/sphinx-pages@master
         id: sphinx-pages
