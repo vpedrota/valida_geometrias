@@ -6,3 +6,4 @@ Source
 
    app
    core_functions
+   teste
