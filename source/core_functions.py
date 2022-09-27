@@ -55,7 +55,7 @@ def json_schema_checker(request:dict) -> dict:
             string = string.replace("is not one of", "não é de nenhum dos tipos ")
             errorMessage['campos'].append(string)
 
-        errorMessage['type'] = "https://dominio.visiona/example-error"
+        errorMessage['type'] = "https://vpedrota.github.io/valida_geometrias/core_functions.html"
         errorMessage['status'] = 400
         errorMessage['detail'] = "A requisição não possui os campos obrigatórios para processamento ou valores estão fora do formato especificado"
         errorMessage['title'] = "A requisição não pode ser processada devido a validação de campos"
