@@ -19,9 +19,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 sphinx       
       - uses: actions/checkout@v3
-      - name: sphinx
+      - name: sphinx generate files
         run: |
           sphinx-apidoc -o docs/ source/
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "vpedrota"
+          git config --global user.email "v.pedrota@unifesp.br"
+
+          git add -A
+          git commit -m "Generating Splhinx files"
+          git push
+      
   build:
     name: Sphinx Pages
     runs-on: ubuntu-latest
