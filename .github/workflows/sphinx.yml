@@ -30,12 +30,7 @@ jobs:
           git add -A
           git commit -m "Generating Splhinx files"
           git push
-      
-  build:
-    name: Sphinx Pages
-    runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success'
-    steps:
+          
       - uses: seanzhengw/sphinx-pages@master
         id: sphinx-pages
         with:
