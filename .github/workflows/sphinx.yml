@@ -28,7 +28,7 @@ jobs:
           git config --global user.email "v.pedrota@unifesp.br"
 
           git add -A
-          git commit -m "Generating Splhinx files"
+          git commit -m "Generating Splhinx files" || true
           git push
           
       - uses: seanzhengw/sphinx-pages@master
