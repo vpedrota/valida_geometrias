@@ -1,2 +1,0 @@
-def carlos():
-  pass
